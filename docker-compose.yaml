@@ -1,0 +1,24 @@
+version: '3'
+services:
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    container_name: juice-shop
+    ports:
+      - "3000:3000"
+
+  dvwa:
+    image: vulnerables/web-dvwa
+    container_name: dvwa
+    environment:
+      MYSQL_USER: dvwa
+      MYSQL_PASSWORD: dvwa
+      MYSQL_DATABASE: dvwa
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8081:80"
+
+  webgoat:
+    image: webgoat/webgoat-8.0:latest
+    container_name: webgoat
+    ports:
+      - "8080:8080"
