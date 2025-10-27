@@ -1,2 +1,2 @@
-# CyberSecyrity_prework
+# CyberSecurity_prework
 Materiały dodatkowe do preworka
